@@ -41,6 +41,13 @@ export async function action({ request }) {
     });
   }
 
-  // TODO: manage token
+  const resData = await response.json();
+  const token = resData.token;
+  
+  console.log(token);
+
+  localStorage.setItem('token', token);
+
+  
   return redirect("/");
 }
