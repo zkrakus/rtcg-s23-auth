@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
-    id: 'root',
+    id: "root",
     loader: tokenLoader,
     children: [
       {
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
             path: "new",
             element: <NewEventPage />,
             action: manipulateEventAction,
-            action: checkAuthLoader,
+            loader: checkAuthLoader,
           },
         ],
       },
